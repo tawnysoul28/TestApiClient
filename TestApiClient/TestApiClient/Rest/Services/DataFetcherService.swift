@@ -16,12 +16,12 @@ class DataFetcherService {
 	}
 
 	// MARK: – Фетчим видео
-	func fetchVideos(query: String, completion: @escaping (Result<Videos?,AppError>) -> ()) {
+	func fetchVideos(query: String, completion: @escaping (Result<SearchVideo?,AppError>) -> ()) {
 
 		let queryItems = [
 			NSURLQueryItem(name: "key", value: Constants.apiKey),
             NSURLQueryItem(name: "part", value: "snippet"),
-            NSURLQueryItem(name: "maxResults", value: "3"),
+            NSURLQueryItem(name: "maxResults", value: "20"),
             NSURLQueryItem(name: "type", value: "video"),
             NSURLQueryItem(name: "q", value: query),
         ]
@@ -31,24 +31,9 @@ class DataFetcherService {
         let url = urlComps.url!
 
 		dataFetcher.fetchGenericJSONData(url: url, response: completion)
-
-//		networkService.request(urlString: urlString) { (result) in
-//			switch result {
-//				case .failure(let error):
-//					completion(.failure(error))
-//				case .success(let data):
-//					do {
-//						let teamData = try JSONDecoder().decode(Videos.self, from: data)
-//						let teams = teamData.data
-//						completion(.success(teams))
-//					} catch {
-//						completion(.failure(.decodingError(error)))
-//				}
-//			}
-//		}
 	}
 
-	// MARK: - Фетчим лого
+	// MARK: - Фетчим заставку
 
 	func fetchImage(with urlString: String, completion: @escaping (Result<UIImage?, AppError>) -> ()) {
 
@@ -60,32 +45,40 @@ class DataFetcherService {
 		dataFetcher.fetchImage(url: url, response: completion)
 	}
 
-//	func getImage(url: String, completion: @escaping (Result<UIImage?, Error>) -> ()) {
-//
-//        guard let url = URL(string: url) else { return }
-//
-//        if let cachedImage = imageCache.object(forKey: url.absoluteString as NSString) {
-//            completion(.success(cachedImage))
-//            return
-//        }
-//
-//        var request = URLRequest(url: url)
-//        request.httpMethod = "GET"
-//
-//        URLSession.shared.dataTask(with: request) { (data, response, error) in
-//
-//            guard let data = data, let image = UIImage(data: data) else {
-//                if let error = error {
-//                    print(error.localizedDescription)
-//                    completion(.failure(error))
-//                    return
-//                }
-//                return
-//            }
-//
-//            imageCache.setObject(image, forKey: url.absoluteString as NSString)
-//            completion(.success(image))
-//        }.resume()
+	// MARK: - Фетчим статистику
 
+	func fecthStatistic(id: String, completion: @escaping (Result<StatisticVideo?, AppError>) -> ()) {
+
+		let queryItems = [
+			NSURLQueryItem(name: "key", value: Constants.apiKey),
+            NSURLQueryItem(name: "part", value: "snippet,contentDetails,statistics,status"),
+            NSURLQueryItem(name: "id", value: id)
+        ]
+
+		let urlComps = NSURLComponents(string: Constants.baseUrl + "/videos")!
+        urlComps.queryItems = queryItems as [URLQueryItem]
+        let url = urlComps.url!
+
+		dataFetcher.fetchGenericJSONData(url: url, response: completion)
+	}
+
+	// MARK: - Фетчим комменты
+	func fetchComments(id: String, pageToken: String?, completion: @escaping (Result<CommentVideo?, AppError>) -> ()) {
+
+		let queryItems = [
+            NSURLQueryItem(name: "key", value: Constants.apiKey),
+            NSURLQueryItem(name: "textFormat", value: "plaintext"),
+            NSURLQueryItem(name: "part", value: "snippet"),
+            NSURLQueryItem(name: "videoId", value: id),
+            NSURLQueryItem(name: "maxResults", value: "10"),
+            NSURLQueryItem(name: "pageToken", value: pageToken ?? ""),
+        ]
+
+        let urlComps = NSURLComponents(string: Constants.baseUrl + "/commentThreads")!
+        urlComps.queryItems = queryItems as [URLQueryItem]
+        let url = urlComps.url!
+
+		dataFetcher.fetchGenericJSONData(url: url, response: completion)
+	}
 }
 

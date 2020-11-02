@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40D643C6254FF82500B13A9A /* CommentVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D643C5254FF82500B13A9A /* CommentVideo.swift */; };
 		40EB40C3254706D8004AC5C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EB40C2254706D8004AC5C5 /* AppDelegate.swift */; };
 		40EB40CA254706D8004AC5C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40EB40C8254706D8004AC5C5 /* Main.storyboard */; };
 		40EB40CC254706DA004AC5C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40EB40CB254706DA004AC5C5 /* Assets.xcassets */; };
@@ -18,11 +19,16 @@
 		40EB40E9254C2B87004AC5C5 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EB40E8254C2B87004AC5C5 /* NetworkDataFetcher.swift */; };
 		40EB40EB254C2B91004AC5C5 /* DataFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EB40EA254C2B91004AC5C5 /* DataFetcherService.swift */; };
 		40EB40ED254C2C88004AC5C5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EB40EC254C2C88004AC5C5 /* Constants.swift */; };
-		40EB40EF254C3063004AC5C5 /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EB40EE254C3063004AC5C5 /* VideoModel.swift */; };
+		40EB40EF254C3063004AC5C5 /* SearchVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EB40EE254C3063004AC5C5 /* SearchVideo.swift */; };
 		40EB40F3254C3D45004AC5C5 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EB40F2254C3D45004AC5C5 /* AppError.swift */; };
+		40EB40F5254D889E004AC5C5 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EB40F4254D889E004AC5C5 /* DetailVC.swift */; };
+		40EB40F8254D88D2004AC5C5 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EB40F7254D88D2004AC5C5 /* DetailCell.swift */; };
+		40EB40FA254F0E28004AC5C5 /* StatisticVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EB40F9254F0E28004AC5C5 /* StatisticVideo.swift */; };
+		40EB40FE254F1FA6004AC5C5 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40EB40FD254F1FA6004AC5C5 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		40D643C5254FF82500B13A9A /* CommentVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentVideo.swift; sourceTree = "<group>"; };
 		40EB40BF254706D8004AC5C5 /* TestApiClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApiClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40EB40C2254706D8004AC5C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40EB40C9254706D8004AC5C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -36,8 +42,12 @@
 		40EB40E8254C2B87004AC5C5 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
 		40EB40EA254C2B91004AC5C5 /* DataFetcherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcherService.swift; sourceTree = "<group>"; };
 		40EB40EC254C2C88004AC5C5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		40EB40EE254C3063004AC5C5 /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
+		40EB40EE254C3063004AC5C5 /* SearchVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVideo.swift; sourceTree = "<group>"; };
 		40EB40F2254C3D45004AC5C5 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		40EB40F4254D889E004AC5C5 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		40EB40F7254D88D2004AC5C5 /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
+		40EB40F9254F0E28004AC5C5 /* StatisticVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticVideo.swift; sourceTree = "<group>"; };
+		40EB40FD254F1FA6004AC5C5 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40EB40FE254F1FA6004AC5C5 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +67,7 @@
 			children = (
 				40EB40C1254706D8004AC5C5 /* TestApiClient */,
 				40EB40C0254706D8004AC5C5 /* Products */,
+				40EB40FC254F1FA6004AC5C5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +86,6 @@
 				40EB40D8254B5EA3004AC5C5 /* Model */,
 				40EB40D6254B5DF1004AC5C5 /* UI */,
 				40EB40D7254B5DFB004AC5C5 /* SupportingFiles */,
-				40EB40C8254706D8004AC5C5 /* Main.storyboard */,
-				40EB40E2254B6D47004AC5C5 /* SceneDelegate.swift */,
-				40EB40CD254706DA004AC5C5 /* LaunchScreen.storyboard */,
 			);
 			path = TestApiClient;
 			sourceTree = "<group>";
@@ -84,9 +93,10 @@
 		40EB40D6254B5DF1004AC5C5 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				40EB40DC254B60D8004AC5C5 /* DetailVC */,
 				40EB40DB254B60BE004AC5C5 /* SearchVideoVC */,
-				40EB40D9254B5FBF004AC5C5 /* SearchVideoVC.swift */,
+				40EB40DC254B60D8004AC5C5 /* DetailVC */,
+				40EB40C8254706D8004AC5C5 /* Main.storyboard */,
+				40EB40CD254706DA004AC5C5 /* LaunchScreen.storyboard */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -95,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				40EB40C2254706D8004AC5C5 /* AppDelegate.swift */,
+				40EB40E2254B6D47004AC5C5 /* SceneDelegate.swift */,
 				40EB40CB254706DA004AC5C5 /* Assets.xcassets */,
 				40EB40D0254706DA004AC5C5 /* Info.plist */,
 				40EB40EC254C2C88004AC5C5 /* Constants.swift */,
@@ -105,7 +116,9 @@
 		40EB40D8254B5EA3004AC5C5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				40EB40EE254C3063004AC5C5 /* VideoModel.swift */,
+				40EB40EE254C3063004AC5C5 /* SearchVideo.swift */,
+				40EB40F9254F0E28004AC5C5 /* StatisticVideo.swift */,
+				40D643C5254FF82500B13A9A /* CommentVideo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -114,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				40EB40DD254B60E8004AC5C5 /* SearchVideoCell */,
+				40EB40D9254B5FBF004AC5C5 /* SearchVideoVC.swift */,
 			);
 			path = SearchVideoVC;
 			sourceTree = "<group>";
@@ -121,6 +135,8 @@
 		40EB40DC254B60D8004AC5C5 /* DetailVC */ = {
 			isa = PBXGroup;
 			children = (
+				40EB40F6254D88AA004AC5C5 /* DetailCell */,
+				40EB40F4254D889E004AC5C5 /* DetailVC.swift */,
 			);
 			path = DetailVC;
 			sourceTree = "<group>";
@@ -150,6 +166,22 @@
 				40EB40EA254C2B91004AC5C5 /* DataFetcherService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		40EB40F6254D88AA004AC5C5 /* DetailCell */ = {
+			isa = PBXGroup;
+			children = (
+				40EB40F7254D88D2004AC5C5 /* DetailCell.swift */,
+			);
+			path = DetailCell;
+			sourceTree = "<group>";
+		};
+		40EB40FC254F1FA6004AC5C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				40EB40FD254F1FA6004AC5C5 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,10 +256,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				40EB40E9254C2B87004AC5C5 /* NetworkDataFetcher.swift in Sources */,
+				40D643C6254FF82500B13A9A /* CommentVideo.swift in Sources */,
 				40EB40DF254B6199004AC5C5 /* SearchVideoCell.swift in Sources */,
+				40EB40F8254D88D2004AC5C5 /* DetailCell.swift in Sources */,
+				40EB40F5254D889E004AC5C5 /* DetailVC.swift in Sources */,
 				40EB40F3254C3D45004AC5C5 /* AppError.swift in Sources */,
 				40EB40DA254B5FBF004AC5C5 /* SearchVideoVC.swift in Sources */,
-				40EB40EF254C3063004AC5C5 /* VideoModel.swift in Sources */,
+				40EB40EF254C3063004AC5C5 /* SearchVideo.swift in Sources */,
+				40EB40FA254F0E28004AC5C5 /* StatisticVideo.swift in Sources */,
 				40EB40C3254706D8004AC5C5 /* AppDelegate.swift in Sources */,
 				40EB40E7254C2B75004AC5C5 /* NetworkService.swift in Sources */,
 				40EB40E3254B6D47004AC5C5 /* SceneDelegate.swift in Sources */,

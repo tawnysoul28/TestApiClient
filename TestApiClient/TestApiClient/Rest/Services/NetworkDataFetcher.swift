@@ -59,8 +59,7 @@ class NetworkDataFetcher: DataFetcher {
             return
         }
 
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
+        let request = URLRequest(url: url)
 
         URLSession.shared.dataTask(with: request) { (data, _, error) in
 

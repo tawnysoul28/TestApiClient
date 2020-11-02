@@ -21,7 +21,7 @@ enum AppError: Error, CustomStringConvertible {
     var description: String {
         switch self {
         case .decodingError(let error):
-            return "\(error)"
+            return "Decoding error: \(error)"
         case .badStatusCode(let code):
             return "Bad status code of \(code) returned from web api"
         case .encodingError(let error):
